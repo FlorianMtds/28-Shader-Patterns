@@ -12,7 +12,10 @@ void main()
     // float strength = 1.0 - vUv.y;
 
     // Patern 6
-    float strength = vUv.y * 10.0;
+    // float strength = vUv.y * 10.0;
+
+    // Patern 7
+    float strength = mod(vUv.y * 10.0, 1.0);
 
     gl_FragColor = vec4(strength, strength, strength, 1.0);
 }
